@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Aura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+<div class="questionario aura-glass"></div>
+
+
+    <header class="cabecalho">
+        <p class="subtitulo">EXPEDIÇÃO ESPACIAL • ANO 2089</p>
+        <h1>MISSÃO <span>AURA</span></h1>
+        <p>Descubra seu perfil para explorar um novo planeta.</p>
+    </header>
+
+    <main>
+        
+<!-- BARRA DE PROGRESSO MISSÃO AURA -->
+<div class="progresso-container">
+    <div class="progresso-textos">
+        <span>ANÁLISE DA AURA</span>
+        <span id="progresso-porcentagem">0%</span>
+    </div>
+
+    <div
+        class="progresso-fundo"
+        role="progressbar"
+        aria-label="Progresso do questionário"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="0"
+        id="progresso-acessivel"
+    >
+        <div id="progresso-barra"></div>
+    </div>
+
+    <p id="progresso-mensagem">Responda às perguntas para avançar...</p>
+</div>
+
+        <section id="formulario-container" class="painel">
+            <h2>Identificação do explorador</h2>
+            <p class="introducao">
+                Responda às perguntas e descubra sua função na missão.
+            </p>
+            <div class="pergunta"></div>
+            <form id="formulario">
+                <label for="nome">Nome completo</label>
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite seu nome"
+                    required
+
+                > <div class="pergunta"></div>
+                <label for="nascimento">Data de nascimento</label>
+                <input
+                    type="date"
+                    id="nascimento"
+                    required
+                >
+
+                <fieldset>
+                     <div class="pergunta"></div>
+                    <legend>1. Uma máquina da nave parou de funcionar. O que você faz?</legend>
+
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="1" required>
+                        Tento consertar a máquina.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="2">
+                        Investigo o motivo da falha.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="3">
+                        Exploro o local em busca de alternativas.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="4">
+                        Organizo a equipe para resolver o problema.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                     <div class="pergunta"></div>
+                    <legend>2. Você encontrou algo desconhecido no planeta. Qual sua reação?</legend>
+
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="1" required>
+                        Construo uma ferramenta para analisar o objeto.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="2">
+                        Pesquiso suas características.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="3">
+                        Vou até o local para explorar.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="4">
+                        Planejo a melhor maneira de investigar.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                     <div class="pergunta"></div>
+                    <legend>3. Qual atividade você prefere realizar?</legend>
+
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="1" required>
+                        Montar e melhorar equipamentos.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="2">
+                        Fazer experiências científicas.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="3">
+                        Conhecer lugares novos.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="4">
+                        Organizar tarefas e estratégias.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                     <div class="pergunta"></div>
+                    <legend>4. Qual seria sua maior contribuição para a missão?</legend>
+
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="1" required>
+                        Criar soluções para os desafios técnicos.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="2">
+                        Descobrir informações sobre o planeta.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="3">
+                        Explorar territórios desconhecidos.
+                    </label>
+
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="4">
+                        Coordenar a equipe e tomar decisões.
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="botao">
+                    DESCOBRIR MEU PERFIL
+                </button>
+            </form>
+
+            <p class="codigo-aura">aura67</p>
+        </section>
+
+        <section id="resultado" class="painel resultado" hidden>
+            <p class="subtitulo">ANÁLISE CONCLUÍDA</p>
+            <h2>Seu perfil na missão</h2>
+
+            <p id="mensagem"></p>
+
+            <div id="dados-perfil"></div>
+
+            <button type="button" id="refazer" class="botao">
+                -refaça-
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>MISSÃO AURA © 2089 | EXPLORANDO O DESCONHECIDO</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
